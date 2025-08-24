@@ -1,15 +1,183 @@
 title: "💎 Gemma Garage"
-description: "Google Summer of Code (GSoC) 2025 @ Google DeepMind"
+description: "Democratizing LLM Fine-tuning | Google Summer of Code 2025 @ Google DeepMind"
+url: "https://gemma-garage.github.io"
+baseurl: ""
 
 # Use remote_theme instead of theme
 remote_theme: "mmistakes/minimal-mistakes"
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-include-cache
+# Site Settings
+locale: "en-US"
+title_separator: "-"
+subtitle: "Google Summer of Code 2025 @ Google DeepMind"
+name: "Lucas Martins"
+repository: "Lucas-Fernandes-Martins/gemma-garage.github.io"
 
+# SEO Related
+google_site_verification:
+bing_site_verification:
+yandex_site_verification:
+naver_site_verification:
+
+# Social Sharing
+twitter:
+  username: &twitter ""
+facebook:
+  username: ""
+  app_id: ""
+  publisher: ""
+og_image: "https://gist.github.com/user-attachments/assets/5a2f4068-05dc-4b47-897c-b25c966bd266"
+
+# Analytics
+analytics:
+  provider: false
+
+# Site Author
 author:
   name: "Lucas Martins"
-  bio: "Google Summer of Code 2025 @ DeepMind | Gemma Garage Lead"
+  avatar: ""
+  bio: "Google Summer of Code 2025 @ DeepMind | Gemma Garage Lead Developer"
+  location: ""
+  email: "lucasfmartins@pm.me"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Lucas-Fernandes-Martins"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/lucas-fernandes-martins"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@lucasfmartins"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Gemma-Garage"
+    - label: "Try Gemma Garage"
+      icon: "fas fa-fw fa-link"
+      url: "https://gemma-garage.web.app"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: America/New_York
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      toc: true
+      toc_sticky: true

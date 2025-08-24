@@ -1,13 +1,15 @@
 main:
-  - title: "Home"
+  - title: "🏠 Home"
     url: /
-  - title: "The Project"
+  - title: "🚀 The Project"
     url: /project/
-  - title: "Architecture"
+  - title: "⚙️ Architecture"
     url: /architecture/
-  - title: "Research"
+  - title: "🧠 Research"
     url: /research/
-  - title: "Open Source"
+  - title: "🤝 Open Source"
     url: /open-source/
-  - title: "Blog"
+  - title: "📝 Blog"
     url: /blog/
+  - title: "🎯 Try It Live"
+    url: "https://gemma-garage.web.app"

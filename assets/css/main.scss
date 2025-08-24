@@ -1,0 +1,321 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Custom styles for Gemma Garage */
+
+/* Header improvements */
+.masthead {
+  border-bottom: 1px solid mix(#fff, $primary-color, 75%);
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.greedy-nav a {
+  color: $text-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* Hero section for splash layout */
+.page__hero {
+  margin-bottom: 2em;
+  
+  .page__hero-caption {
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+    border-radius: 8px;
+    padding: 1em;
+    margin-top: 1em;
+  }
+}
+
+/* Enhanced buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  &--primary {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    
+    &:hover {
+      background: linear-gradient(45deg, #5a6fd8 0%, #6a4190 100%);
+    }
+  }
+  
+  &--inverse {
+    background: linear-gradient(45deg, #434343 0%, #000000 100%);
+    border: none;
+    
+    &:hover {
+      background: linear-gradient(45deg, #333333 0%, #111111 100%);
+    }
+  }
+}
+
+/* Feature rows enhancement */
+.feature__wrapper {
+  .feature__item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2em 1.5em;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .feature__item-teaser {
+      margin-bottom: 1.5em;
+      
+      img {
+        border-radius: 8px;
+      }
+    }
+    
+    h3 {
+      color: $primary-color;
+      font-size: 1.3em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+/* Table of Contents styling */
+.toc {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  .toc__title {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    padding: 0.8em 1em;
+    font-weight: 600;
+  }
+  
+  .toc__menu {
+    padding: 1em;
+    
+    a {
+      color: #444;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Enhanced code blocks */
+.highlight {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  pre {
+    margin: 0;
+    padding: 1.5em;
+  }
+}
+
+/* Figure improvements */
+figure {
+  text-align: center;
+  margin: 2em 0;
+  
+  img {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+  }
+}
+
+/* Video responsiveness */
+.responsive-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 2em 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+}
+
+/* Enhanced headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  
+  &:before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin: -60px 0 0;
+  }
+}
+
+h1 {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+/* Author profile enhancements */
+.author__avatar {
+  img {
+    border: 3px solid $primary-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.author__content {
+  .author__name {
+    color: $primary-color;
+    font-weight: 600;
+  }
+  
+  .author__bio {
+    font-style: italic;
+    color: #666;
+  }
+}
+
+/* Footer improvements */
+.page__footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feature__wrapper .feature__item {
+    margin-bottom: 2em;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* Print styles */
+@media print {
+  .masthead,
+  .page__footer,
+  .page__share,
+  .author__avatar,
+  .toc {
+    display: none !important;
+  }
+  
+  .page__content {
+    margin-top: 0;
+  }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature__item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.feature__item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.feature__item:nth-child(3) {
+  animation-delay: 0.4s;
+}
