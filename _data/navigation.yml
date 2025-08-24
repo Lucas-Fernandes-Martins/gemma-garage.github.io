@@ -1,0 +1,13 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "The Project"
+    url: /project/
+  - title: "Architecture"
+    url: /architecture/
+  - title: "Research"
+    url: /research/
+  - title: "Open Source"
+    url: /open-source/
+  - title: "Blog"
+    url: /blog/
