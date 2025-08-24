@@ -1,0 +1,36 @@
+title: "💎 Gemma Garage"
+description: "Google Summer of Code (GSoC) 2025 @ Google DeepMind"
+theme: minimal-mistakes-jekyll
+
+# Minimal Mistakes settings
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+author:
+  name: "Lucas Martins"
+  avatar: "/assets/avatar.png"
+  bio: "Google Summer of Code 2025 @ DeepMind | Gemma Garage"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/Gemma-Garage"
+    - label: "Website"
+      url: "https://gemma-garage.web.app"
+    - label: "YouTube Demo"
+      url: "https://www.youtube.com/watch?v=1AZTpRR9KGo"
+
+# Enable syntax highlighting
+markdown: kramdown
+highlighter: rouge
+
+# Navigation
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
